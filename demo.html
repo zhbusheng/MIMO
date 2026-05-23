@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>MIMO - AI 周报生成器 运行演示</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1e1e1e; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: monospace; }
+  .window { width: 780px; border-radius: 10px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
+  .titlebar { background: #3c3c3c; padding: 12px 16px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 13px; height: 13px; border-radius: 50%; }
+  .dot.red { background: #ff5f57; }
+  .dot.yellow { background: #febc2e; }
+  .dot.green { background: #28c840; }
+  .title { color: #aaa; font-size: 13px; margin-left: 8px; }
+  .terminal { background: #0d1117; padding: 24px; font-size: 14px; line-height: 1.8; color: #c9d1d9; }
+  .prompt { color: #58a6ff; }
+  .cmd { color: #e6edf3; }
+  .input-label { color: #8b949e; }
+  .user-input { color: #79c0ff; }
+  .ai-output { color: #3fb950; }
+  .divider { color: #484f58; }
+  .bold { color: #f0f6fc; font-weight: bold; }
+  .success { color: #3fb950; }
+  .dim { color: #6e7681; }
+  br { display: block; margin: 0; }
+</style>
+</head>
+<body>
+<div class="window">
+  <div class="titlebar">
+    <div class="dot red"></div>
+    <div class="dot yellow"></div>
+    <div class="dot green"></div>
+    <span class="title">bash — python app.py</span>
+  </div>
+  <div class="terminal">
+    <div><span class="prompt">(mimo) C:\Users\user\MIMO&gt;</span> <span class="cmd">python app.py</span></div>
+    <br>
+    <div class="bold">=== AI 智能周报生成器 ===</div>
+    <br>
+    <div class="input-label">请输入本周工作内容（每条一行，输入空行结束）：</div>
+    <div><span class="user-input">完成用户登录模块重构，引入 JWT 鉴权</span></div>
+    <div><span class="user-input">修复了订单列表分页查询的性能问题，响应时间从 2s 降至 200ms</span></div>
+    <div><span class="user-input">参与产品需求评审，输出技术方案文档</span></div>
+    <div><span class="user-input">完成代码 Review 共 8 个 PR</span></div>
+    <div><span class="user-input">&nbsp;</span></div>
+    <br>
+    <div class="input-label">正在生成周报...</div>
+    <br>
+    <div class="divider">----------------------------------------</div>
+    <br>
+    <div class="ai-output"><span class="bold">【本周工作总结】</span></div>
+    <br>
+    <div class="ai-output">本周主要围绕系统安全性提升与性能优化两条主线推进工作。完成用户登录模块的整体重构，将原有 Session 机制迁移至 JWT 无状态鉴权方案，有效降低服务端存储压力，同时提升接口安全性；针对订单列表分页查询的性能瓶颈进行深度分析与优化，通过索引调整与查询语句重写，将接口响应时间从 2 秒压缩至 200 毫秒，性能提升约 90%。</div>
+    <br>
+    <div class="ai-output"><span class="bold">【工作亮点】</span></div>
+    <br>
+    <div class="ai-output">· JWT 鉴权改造已平滑上线，无兼容性问题，为后续微服务拆分奠定基础</div>
+    <div class="ai-output">· 订单查询性能优化效果显著，QPS 提升约 8 倍，用户体验明显改善</div>
+    <div class="ai-output">· 积极参与产品评审并产出技术方案文档，推动需求落地效率提升</div>
+    <div class="ai-output">· 完成 8 个 PR 的 Code Review，保障代码质量与团队规范统一</div>
+    <br>
+    <div class="ai-output"><span class="bold">【下周计划】</span></div>
+    <br>
+    <div class="ai-output">1. 推进本周技术方案评审结论的落地开发，预计完成核心模块 50%</div>
+    <div class="ai-output">2. 持续关注线上接口性能监控，对其余慢查询接口进行逐步治理</div>
+    <div class="ai-output">3. 参与团队技术分享，输出 JWT 鉴权改造的实践总结文档</div>
+    <br>
+    <div class="divider">----------------------------------------</div>
+    <br>
+    <div class="success">周报生成完成！</div>
+    <br>
+    <div class="dim">耗时 4.2s &nbsp;|&nbsp; 输入要点 4 条 &nbsp;|&nbsp; 输出字数 约380字</div>
+    <br>
+    <div><span class="prompt">(mimo) C:\Users\user\MIMO&gt;</span> <span class="cmd">█</span></div>
+  </div>
+</div>
+</body>
+</html>
